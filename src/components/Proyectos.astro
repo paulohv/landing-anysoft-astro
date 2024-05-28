@@ -1,0 +1,42 @@
+---
+import CardProyectos from "./CardProyectos.astro";
+---
+
+<div
+  class="bgDiv w-7/12 h-auto flex flex-col py-16 px-40 items-start justify-start"
+>
+  <h1 class="title w-2/4 mb-14">Nuestro proyectos de desarrollo</h1>
+  <CardProyectos />
+  <CardProyectos />
+  <CardProyectos />
+  <CardProyectos />
+</div>
+
+<style>
+  .bgDiv {
+    background-color: #001f28;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    clip-path: margin-box;
+    max-height: fit-content;
+  }
+
+  .title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #00cabe;
+  }
+</style>
+
+<!-- <div
+  class="bottom-0 left-full top-0 h-[700px] w-[700px]
+translate-x-[80%] translate-y-[20%] rounded-full
+bg-[#EB00FF] opacity-5 blur-[70px]"
+>
+</div>
+<div
+  class="bottom-0 left-auto right-0 top-20 h-[700px] w-[700px]
+-translate-x-[80%] -translate-y-[80%] rounded-full
+bg-[#00CABE] opacity-5 blur-[70px]"
+>
+</div> -->

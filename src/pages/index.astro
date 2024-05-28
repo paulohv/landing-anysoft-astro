@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BotonContactanos from "../components/BotonContactanos.astro";
+import GradietSecctionOne from "../components/GradientSectionOne.astro";
+import Proyectos from "../components/Proyectos.astro";
+import Nosotros from "../components/Nosotros.astro";
+---
+
+<Layout title="AnySoft">
+  <main class="">
+    <article class="lg:w-7/12 mx-auto py-44 flex flex-row">
+      <div class="flex flex-col items-start">
+        <h1 class="txtColorPrimary text-5xl font-black gap-x-4 mt-16">
+          Hola!, Somos AnySoft.
+        </h1>
+        <h2 class="txtColorPrimary text-3xl font-semibold w-full mt-2">
+          Desarrollamos una solución para tus necesidades.
+        </h2>
+        <p class="txtColorPrimary text-lg font-normal w-4/5 mt-4">
+          Somos AnySoft consultoría de software, ofrece soluciones innovadoras y
+          a medida para potenciar tu negocio. Con nuestro equipo experto,
+          transformamos tus ideas en realidad digital, impulsando tu éxito en el
+          mundo digital.
+        </p>
+        <BotonContactanos />
+      </div>
+      <img class="w-2/4 h-96" src="fondoSeccion.png" alt="fondo" />
+      <GradietSecctionOne />
+    </article>
+    <section class="flex justify-center">
+      <Proyectos />
+    </section>
+    <section class="flex justify-center">
+      <Nosotros />
+    </section>
+  </main>
+
+  <style>
+    .txtColorPrimary {
+      color: #084c61;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  </style>
+</Layout>

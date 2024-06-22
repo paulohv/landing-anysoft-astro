@@ -1,0 +1,30 @@
+[
+    {
+        "imageSrc":"/public/doge.jpg",
+        "title": "Giusepe Epifani",
+        "buttonText":"LinkedIn",
+        "description":"Ingeniero de Software",        
+        "buttonLink": ""
+    },
+    {
+        "imageSrc":"",
+        "title": "Jhonnatan Alarcón",
+        "buttonText":"LinkedIn",
+        "description":"Ingeniero de Software",
+        "buttonLink": ""
+    },
+    {   
+        "title": "Paulo Herrera",
+        "buttonText":"LinkedIn",
+        "description":"Ingeniero de Software",
+        "buttonLink": "https://www.linkedin.com/feed/"
+    },
+    {
+        "imageSrc":"",
+        "title": "Joaquin Rojas",
+        "buttonText":"LinkedIn",
+        "description":"Ingeniero de Software",
+        "buttonLink": ""
+    }
+
+]

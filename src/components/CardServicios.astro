@@ -1,0 +1,54 @@
+---
+import servicios from "../config/servicios.json";
+
+---
+
+<div class="grid md:grid-cols-3 gap-10 p-4">
+    {
+        servicios.map((servicios)=>(
+            <div class="bg-sky-950	 shadowCustom p-10 rounded-xl">
+                <h2 class="text-white text-3xl font-bold my-4">{servicios.title}</h2>
+                <p class="text-white">{servicios.description}</p>
+            </div>
+        ))
+    }
+</div>
+
+
+  <style>
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      max-width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+    
+    .shadowCustom:hover {
+        box-shadow: 0px 0px 15px rgb(30, 200, 240, 50%);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+  
+    .card-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .card-content {
+      padding: 16px;
+    }
+  
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1.5em;
+    }
+  
+    .card p {
+      margin: 0;
+      color: #555;
+    }
+  </style>

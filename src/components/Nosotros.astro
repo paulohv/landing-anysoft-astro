@@ -1,21 +1,79 @@
 ---
+import nosotros from "../config/nosotros.json"
 
+const { imageSrc, title, buttonText, buttonLink, icon} = Astro.props;
 ---
 
-<div class="w-7/12 h-auto flex flex-col py-16 px-52 items-start">
-  <h1>Quienes somos</h1>
-  <div>
-    <div
-      class="bottom-0 left-1/4 top-0 h-[500px] w-[500px]
-    -translate-x-[1%] translate-y-[50%] rounded-full
-    bg-[#EB00FF] opacity-15 blur-[70px]"
-    >
-    </div>
-    <div
-      class="bottom-0 left-2/4 right-0 top-20 h-[500px] w-[500px]
-    -translate-x-[130%] translate-y-[50%] rounded-full
-    bg-[#00CABE] opacity-15 blur-[70px]"
-    >
-    </div>
+
+<div >
+  <h1 class="text-center font-bold title mt-16">Nuestro Equipo</h1>
+  <div class="grid text-center md:grid-cols-4 gap-8 p-4 mt-5">
+    {
+      nosotros.map((nosotros)=>(
+          <div class="bg-white p-10 rounded-xl card">
+              <img src="/src/icons/social/doge.jpeg" class="card-image" />
+              <h2 class="h2-color text-3xl font-bold my-4">{nosotros.title}</h2>
+              <h4 class="text-black">{nosotros.description}</h4>
+              <a href={nosotros.buttonLink} class="card-button">
+                <img src="/src/icons/social/linkedinicon.png" class="icon">
+                {nosotros.buttonText}
+              </a>
+          </div>
+      ))
+    }
   </div>
+  
 </div>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #3B6FD6;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .card-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+  .card-title {
+    margin: 16px 0;
+    font-size: 1.5em;
+    color: #3B6FD6;
+  }
+  .card-button {
+    display: flex;
+    width: 35%;
+    padding: 16px 32px;
+    margin-top: 16px;
+    font-size: 1em;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    
+  }
+  .card-button:hover {
+    background-color: #0056b3;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5em;
+  }
+  .title {
+    font-size: 4rem;
+    font-weight: 750;
+    color: #333;
+  }
+  .h2-color{
+    color: #00166F;
+  }
+</style>
